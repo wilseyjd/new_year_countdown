@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Midnight Sparkle: NYE Simulator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #050505;
+      color: #ffffff;
+      overflow: hidden;
+    }
+    .font-festive {
+      font-family: 'Cinzel Decorative', cursive;
+    }
+    @keyframes pulse-gold {
+      0%, 100% { text-shadow: 0 0 20px rgba(212, 175, 55, 0.5); }
+      50% { text-shadow: 0 0 40px rgba(212, 175, 55, 0.9); }
+    }
+    .animate-pulse-gold {
+      animation: pulse-gold 2s infinite ease-in-out;
+    }
+    canvas#confetti-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 50;
+    }
+  </style>
+  <script>
+    // Ensure process.env is available for the SDK
+    window.process = window.process || { env: {} };
+  </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.474.0?external=react",
+    "@google/genai": "https://esm.sh/@google/genai@1.34.0",
+    "framer-motion": "https://esm.sh/framer-motion@11.18.2?external=react,react-dom",
+    "canvas-confetti": "https://esm.sh/canvas-confetti@1.9.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>
